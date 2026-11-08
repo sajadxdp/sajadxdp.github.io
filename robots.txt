@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sajadinmaker.github.io/sitemap.xml
+Sitemap: https://sajadxdp.github.io/sitemap.xml

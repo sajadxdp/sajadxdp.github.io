@@ -1,7 +1,7 @@
 # Portfolio Site
 
-> Maintainer doc. Static site, hosted by GitHub Pages at sajadinmaker.github.io.
-> Codebase: `~/sajadinmaker.github.io` | Stack: vanilla HTML + CSS + JS, no build.
+> Maintainer doc. Static site, hosted by GitHub Pages at sajadxdp.github.io.
+> Codebase: `~/sajadxdp.github.io` | Stack: vanilla HTML + CSS + JS, no build.
 
 ## 1. What this product is
 
@@ -24,7 +24,7 @@ No templating: header/nav/footer duplicated per file (drift risk, see roadmap).
 
 ### Serve locally
 ```bash
-python3 -m http.server -d ~/sajadinmaker.github.io 8000
+python3 -m http.server -d ~/sajadxdp.github.io 8000
 # → http://localhost:8000
 ```
 
