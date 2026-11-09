@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#faf8f2">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f0e0d">
+<script>try{if(localStorage.getItem('sajad:theme')==='light')
+document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
 <title>Projects · Sajad</title>
 <meta name="description" content="Projects: Lexora, EsenceLab, vpnbox, HookFlow, neuDB. Backend systems and applied AI.">
 <meta name="author" content="Abdulla Sajad">
@@ -25,7 +27,10 @@
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header>
-  <p class="site-title"><a href="./">Sajad</a></p>
+  <div class="brand-row">
+    <a class="wordmark" href="./" aria-label="Sajad, home"><span class="visually-hidden">Sajad</span><svg class="mark" viewBox="0 0 18 7" width="72" height="28" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="9" y="0" width="1" height="1"/><rect x="17" y="0" width="1" height="1"/><rect x="17" y="1" width="1" height="1"/><rect x="0" y="2" width="3" height="1"/><rect x="4" y="2" width="3" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="11" y="2" width="3" height="1"/><rect x="17" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="15" y="3" width="3" height="1"/><rect x="0" y="4" width="3" height="1"/><rect x="4" y="4" width="3" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="11" y="4" width="3" height="1"/><rect x="15" y="4" width="1" height="1"/><rect x="17" y="4" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/><rect x="11" y="5" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="15" y="5" width="1" height="1"/><rect x="17" y="5" width="1" height="1"/><rect x="0" y="6" width="3" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="13" y="6" width="1" height="1"/><rect x="15" y="6" width="3" height="1"/></svg></a>
+    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch to the light theme">light</button>
+  </div>
   <p class="site-role">software engineer · ai</p>
   <nav aria-label="Primary">
     <a href="./about.html"><span class="n">01</span> About me</a>
