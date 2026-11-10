@@ -12,7 +12,7 @@
     var setTheme = function (next) {
       isLight = next === 'light';
       root.setAttribute('data-theme', isLight ? 'light' : 'dark');
-      if (themeMeta) themeMeta.content = isLight ? '#f4f1ea' : '#0f0e0d';
+      if (themeMeta) themeMeta.content = isLight ? '#e9e8e4' : '#141516';
       toggle.textContent = isLight ? 'dark' : 'light';
       toggle.setAttribute('aria-label',
         isLight ? 'Switch to the dark theme' : 'Switch to the light theme');
