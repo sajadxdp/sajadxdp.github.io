@@ -6,8 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#141516">
-<script>try{if(localStorage.getItem('sajad:theme')==='light')
-document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<script>try{if(localStorage.getItem('sajad:theme')==='light'){
+document.documentElement.setAttribute('data-theme','light');
+var m=document.querySelector('meta[name="theme-color"]');
+if(m)m.content='#e9e8e4'}}catch(e){}</script>
 <title>Projects · Sajad</title>
 <meta name="description" content="Projects: Lexora, EsenceLab, HookFlow, neuDB. Backend systems and applied AI.">
 <meta name="author" content="Abdulla Sajad">

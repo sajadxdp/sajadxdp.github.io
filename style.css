@@ -1,13 +1,12 @@
-/* sajadxdp.github.io - edition 6, "charcoal studio".
-   Rebuilt from scratch on the reference theme's pattern: dark-first
-   charcoal canvas, mono chassis, pixel wordmark hero, rail + content
-   home grid, hairline rows. Tokens only, system fonts only, no
-   frameworks, no build step, zero animations. */
+/* sajadxdp.github.io - edition 6.1, "charcoal studio", minimal.
+   Rebuilt on the reference theme's pattern: dark-first charcoal
+   canvas, mono chassis, rail + content home grid, hairline rows.
+   Tokens only, system fonts only, no frameworks, no build step,
+   zero animations. */
 
 :root {
   --bg: #141516;
   --surface: #1b1d1e;
-  --code: #181a1b;
   --text: #c9cdd2;
   --bright: #e9ecef;
   --muted: #8e9399;
@@ -23,7 +22,6 @@
 [data-theme="light"] {
   --bg: #e9e8e4;
   --surface: #f3f2ee;
-  --code: #dcdad4;
   --text: #383e44;
   --bright: #22262a;
   --muted: #5d646b;
@@ -184,18 +182,7 @@ strong { color: var(--bright); font-weight: 600; }
   margin: 0 0 1rem;
 }
 
-/* ---- home: hero wordmark + rail grid ---- */
-
-.hero-mark {
-  margin: .8rem 0 1.6rem;
-  color: var(--bright);
-}
-
-.hero-mark svg {
-  display: block;
-  width: min(100%, 414px);
-  height: auto;
-}
+/* ---- home: rail grid ---- */
 
 .site-intro { max-width: var(--read); }
 
@@ -233,12 +220,6 @@ strong { color: var(--bright); font-weight: 600; }
 .rail-list a { color: var(--text); }
 
 .rail-list a:hover { color: var(--accent); }
-
-.rail-note {
-  font: 400 .74rem/1.7 var(--mono);
-  color: var(--muted);
-  margin: .8rem 0 0;
-}
 
 /* ---- section head + rows ---- */
 

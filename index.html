@@ -6,8 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#141516">
-<script>try{if(localStorage.getItem('sajad:theme')==='light')
-document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<script>try{if(localStorage.getItem('sajad:theme')==='light'){
+document.documentElement.setAttribute('data-theme','light');
+var m=document.querySelector('meta[name="theme-color"]');
+if(m)m.content='#e9e8e4'}}catch(e){}</script>
 <title>Sajad · Software Engineer</title>
 <meta name="description" content="Sajad writes the backends behind AI products. Projects and every way to reach him.">
 <meta name="author" content="Abdulla Sajad">
@@ -39,7 +41,6 @@ document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
 </header>
 
 <main id="main">
-<div class="hero-mark" aria-hidden="true"><svg class="mark" viewBox="0 0 18 7" width="72" height="28" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="9" y="0" width="1" height="1"/><rect x="17" y="0" width="1" height="1"/><rect x="17" y="1" width="1" height="1"/><rect x="0" y="2" width="3" height="1"/><rect x="4" y="2" width="3" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="11" y="2" width="3" height="1"/><rect x="17" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="15" y="3" width="3" height="1"/><rect x="0" y="4" width="3" height="1"/><rect x="4" y="4" width="3" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="11" y="4" width="3" height="1"/><rect x="15" y="4" width="1" height="1"/><rect x="17" y="4" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/><rect x="11" y="5" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="15" y="5" width="1" height="1"/><rect x="17" y="5" width="1" height="1"/><rect x="0" y="6" width="3" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="13" y="6" width="1" height="1"/><rect x="15" y="6" width="3" height="1"/></svg></div>
 <h1>Hi, I'm Sajad.</h1>
 <p class="stand"><strong>I write the backends behind AI products.</strong><br>
 The model gets the applause; I take care of what it stands on: Python, FastAPI, PostgreSQL, Redis, and the tests that keep them working.</p>
@@ -52,7 +53,6 @@ The model gets the applause; I take care of what it stands on: Python, FastAPI, 
       <li><a href="https://www.linkedin.com/in/abdullasajad">linkedin <span class="arrow" aria-hidden="true">&#8599;</span></a></li>
       <li><a href="mailto:abdullasajad01@gmail.com">email</a></li>
     </ul>
-    <p class="rail-note">email works best.</p>
   </aside>
 
   <div class="board">
