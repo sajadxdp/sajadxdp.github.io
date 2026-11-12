@@ -1,12 +1,11 @@
-/* sajadxdp.github.io - edition 6.1, "charcoal studio", minimal.
-   Rebuilt on the reference theme's pattern: dark-first charcoal
-   canvas, mono chassis, rail + content home grid, hairline rows.
-   Tokens only, system fonts only, no frameworks, no build step,
-   zero animations. */
+/* sajadxdp.github.io - edition 7, "charcoal studio", dark minimal.
+   Dark only: no toggle, no light room, no theme storage. Mono
+   chassis, rail + content home grid, hairline rows. Tokens only,
+   system fonts only, no frameworks, no build step, zero
+   animations. */
 
 :root {
   --bg: #141516;
-  --surface: #1b1d1e;
   --text: #c9cdd2;
   --bright: #e9ecef;
   --muted: #8e9399;
@@ -19,22 +18,9 @@
   --gutter: clamp(1rem, 4vw, 1.4rem);
 }
 
-[data-theme="light"] {
-  --bg: #e9e8e4;
-  --surface: #f3f2ee;
-  --text: #383e44;
-  --bright: #22262a;
-  --muted: #5d646b;
-  --accent: #a3461a;
-  --border: #dcdad4;
-  --border-strong: #c9c6bf;
-}
-
 * { box-sizing: border-box; }
 
 html { color-scheme: dark; }
-
-[data-theme="light"] { color-scheme: light; }
 
 body {
   margin: 0;
@@ -120,30 +106,12 @@ nav[aria-label="Primary"] a { color: var(--muted); }
 nav[aria-label="Primary"] a:hover,
 nav[aria-label="Primary"] a[aria-current="page"] { color: var(--bright); }
 
-nav[aria-label="Primary"] .n {
-  color: var(--accent);
-  font-size: .68rem;
-  margin-right: .2rem;
-}
-
 .site-role {
   flex-basis: 100%;
   font: 400 .7rem/1.6 var(--mono);
   color: var(--muted);
   letter-spacing: .04em;
 }
-
-.theme-toggle {
-  font: 400 .7rem/1 var(--mono);
-  color: var(--muted);
-  background: transparent;
-  border: 1px solid var(--border-strong);
-  padding: .45em .8em;
-  cursor: pointer;
-  margin-left: .2rem;
-}
-
-.theme-toggle:hover { color: var(--bright); }
 
 /* ---- page chassis ---- */
 
@@ -183,8 +151,6 @@ strong { color: var(--bright); font-weight: 600; }
 }
 
 /* ---- home: rail grid ---- */
-
-.site-intro { max-width: var(--read); }
 
 .home-grid {
   display: grid;

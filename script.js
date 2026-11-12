@@ -1,28 +1,7 @@
-/* Progressive enhancement: color theme, footer year, active nav, copy email. */
+/* Progressive enhancement: footer year, active nav, copy email.
+   Dark only - there is no theme toggle and no stored theme. */
 (function () {
   'use strict';
-
-  /* Color theme. Dark charcoal is the default; light persists in localStorage.
-     The label names the room you would move to, not the one you are in. */
-  var root = document.documentElement;
-  var toggle = document.getElementById('theme-toggle');
-  var themeMeta = document.querySelector('meta[name="theme-color"]');
-  var isLight = root.getAttribute('data-theme') === 'light';
-  if (toggle) {
-    var setTheme = function (next) {
-      isLight = next === 'light';
-      root.setAttribute('data-theme', isLight ? 'light' : 'dark');
-      if (themeMeta) themeMeta.content = isLight ? '#e9e8e4' : '#141516';
-      toggle.textContent = isLight ? 'dark' : 'light';
-      toggle.setAttribute('aria-label',
-        isLight ? 'Switch to the dark theme' : 'Switch to the light theme');
-      try { localStorage.setItem('sajad:theme', next); } catch (e) { /* private mode */ }
-    };
-    if (isLight) setTheme('light');
-    toggle.addEventListener('click', function () {
-      setTheme(isLight ? 'dark' : 'light');
-    });
-  }
 
   /* Footer year. */
   var y = document.getElementById('year');
