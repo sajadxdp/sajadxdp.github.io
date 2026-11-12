@@ -17,7 +17,7 @@
   --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
   --read: 40rem;
-  --gutter: 1.4rem;
+  --gutter: clamp(1rem, 4vw, 1.4rem);
 }
 
 [data-theme="light"] {
@@ -52,6 +52,7 @@ body {
 a {
   color: var(--bright);
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 a:hover { color: var(--accent); }
@@ -157,7 +158,7 @@ main {
 h1 {
   color: var(--bright);
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: clamp(1.5rem, 1.25rem + 1.2vw, 1.7rem);
   line-height: 1.25;
   margin: 0 0 1rem;
 }
@@ -372,13 +373,12 @@ footer p { margin: 0; }
 }
 
 @media (max-width: 539px) {
-  :root { --gutter: 1rem; }
   main { padding-top: 2.2rem; }
   header { padding-top: 1.1rem; }
   nav[aria-label="Primary"] {
     font-size: .72rem;
     gap: .15rem .8rem;
   }
+  nav[aria-label="Primary"] a { padding: .3em 0; }
   .site-role { order: 3; }
-  h1 { font-size: 1.5rem; }
 }
