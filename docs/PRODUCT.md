@@ -5,46 +5,55 @@
 
 ## 1. What this product is
 
-Personal portfolio for Sajad: Projects (Lexora, EsenceLab, vpnbox, HookFlow, neuDB), About,
-AI and Engineering pages. Goal: bring visitors to GitHub / LinkedIn /
-email contact. No blog, no archive, no feed, no personality pages.
+Personal portfolio for Sajad: Home, About, Projects (Lexora, EsenceLab,
+HookFlow, neuDB), Contact. Goal: bring visitors to GitHub / LinkedIn /
+email contact. No blog, no feed, no archive, no subpages.
 
 ## 2. How it works
 
-- `index.html` (canonical), `projects.html`, `about.html`, `ai.html`, `engineering.html`, `404.html`
-- `projects/lexora.html`, `projects/esencelab.html` (case studies)
-- `style.css` (ink palette: pure black `#000000`, quiet greys, system blue links; 42rem column, static header, mono chrome)
-- `script.js` (footer year, active-nav marking, mailto copy)
-- Discovery: `sitemap.xml`, `robots.txt`, OG meta, `favicon.svg`
-- Internal maintainer docs: `README.md`, `docs/PRODUCT.md`, `humans.txt`
-
-No templating: header/nav/footer duplicated per file (drift risk, see roadmap).
+- Four pages: `index.html`, `about.html`, `projects.html`, `contact.html`.
+  No 404 page, no project subdirectories. Every project title links its
+  GitHub repo directly.
+- `style.css` (edition 7, dark-only charcoal: bg `#141516`, text `#c9cdd2`,
+  bright `#e9ecef`, muted `#8e9399`, accent `#e0855a`; 40rem read column,
+  fluid gutter and h1, rail + content home grid at 840px, hairline rows,
+  zero animations)
+- `script.js` (footer year, active-nav marking, mailto copy button)
+- Discovery: `sitemap.xml` (4 urls), `robots.txt`, OG meta, `favicon.svg`
+- No templating: header/nav/footer duplicated per file (drift risk, see roadmap)
 
 ## 3. User guide
 
 ### Serve locally
 ```bash
 python3 -m http.server -d ~/sajadxdp.github.io 8000
-# → http://localhost:8000
 ```
 
 ### Edit content
-- Site copy follows the technical-writing standard: plain sentences, one thought per sentence, real words over jargon (Diataxis modes, Google developer style, STE, Global English).
-- Project blurbs: `index.html` + `projects.html` + `projects/*.html` (keep in sync with the GitHub profile README)
+- Hero openers are pinned: `Hi, I'm Sajad.` (home), `Hi. I'm Sajad.` (about).
+- Project blurbs: `index.html` + `projects.html` (keep in sync with the
+  GitHub profile README)
 - Styles/nav: `style.css`, each page's `<nav>`
 
 ### Deploy
-Push `main` → GitHub Pages serves the repo root. Verify: `/sitemap.xml`, `/robots.txt`, `404.html`.
+Push `main` → GitHub Pages serves the repo root. Verify: `/sitemap.xml`,
+`/robots.txt`.
 
 ## 4. Operations
 
-- No env, no health endpoint (static). Monitor via Pages status + manual link check.
-- Keep `sitemap.xml` `lastmod` in sync when a page's content changes.
-- Roadmap: shared header/footer include (or 11ty), `link-check` CI, HTML validator, contact form (currently mailto only).
+- No env, no health endpoint (static). Monitor via Pages status + manual
+  link check.
+- Keep `sitemap.xml` `lastmod` in sync when a page's content changes
+  (currently 2026-11-13).
+- The verification harness (check, smoke, contrast, responsive, live-audit
+  scripts) lives outside the repo in `~/shots/pf-harness/`.
+- Roadmap: link-check CI, HTML validator run. Both are dev-time only; the
+  site itself stays build-free.
 
 ## 5. Verification
 
 ```bash
 python3 -m http.server -d . 8000
-# check /, /projects.html, /sitemap.xml, /404.html
 ```
+Then check `/`, `/about.html`, `/projects.html`, `/contact.html`,
+`/sitemap.xml`.
