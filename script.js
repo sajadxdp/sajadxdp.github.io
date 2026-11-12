@@ -63,7 +63,19 @@
           }, 1600);
         };
         var fail = function () {
-          window.prompt('Copy email address', addr);
+          /* Clipboard unavailable or refused: select-and-copy via
+             execCommand, manual prompt as the last resort. */
+          var ta = document.createElement('textarea');
+          ta.value = addr;
+          ta.setAttribute('readonly', '');
+          ta.className = 'visually-hidden';
+          document.body.appendChild(ta);
+          ta.select();
+          var done = false;
+          try { done = document.execCommand('copy'); } catch (e) {}
+          ta.remove();
+          if (done) ok();
+          else window.prompt('Copy email address', addr);
         };
         if (supportsClipboard) navigator.clipboard.writeText(addr).then(ok, fail);
         else fail();
