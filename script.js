@@ -2,25 +2,25 @@
 (function () {
   'use strict';
 
-  /* Color theme. Light paper is the default; dark persists in localStorage.
+  /* Color theme. Dark charcoal is the default; light persists in localStorage.
      The label names the room you would move to, not the one you are in. */
   var root = document.documentElement;
   var toggle = document.getElementById('theme-toggle');
   var themeMeta = document.querySelector('meta[name="theme-color"]');
-  var isDark = root.getAttribute('data-theme') === 'dark';
+  var isLight = root.getAttribute('data-theme') === 'light';
   if (toggle) {
     var setTheme = function (next) {
-      isDark = next === 'dark';
-      root.setAttribute('data-theme', isDark ? 'dark' : 'light');
-      if (themeMeta) themeMeta.content = isDark ? '#1e2023' : '#fcfcfb';
-      toggle.textContent = isDark ? 'light' : 'dark';
+      isLight = next === 'light';
+      root.setAttribute('data-theme', isLight ? 'light' : 'dark');
+      if (themeMeta) themeMeta.content = isLight ? '#e9e8e4' : '#141516';
+      toggle.textContent = isLight ? 'dark' : 'light';
       toggle.setAttribute('aria-label',
-        isDark ? 'Switch to the light theme' : 'Switch to the dark theme');
+        isLight ? 'Switch to the dark theme' : 'Switch to the light theme');
       try { localStorage.setItem('sajad:theme', next); } catch (e) { /* private mode */ }
     };
-    if (isDark) setTheme('dark');
+    if (isLight) setTheme('light');
     toggle.addEventListener('click', function () {
-      setTheme(isDark ? 'light' : 'dark');
+      setTheme(isLight ? 'dark' : 'light');
     });
   }
 
