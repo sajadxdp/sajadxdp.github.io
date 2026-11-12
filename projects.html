@@ -1,99 +1,75 @@
+<!-- no build step, no frameworks. view source is fine. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#141516">
-<script>try{if(localStorage.getItem('sajad:theme')==='light')
-document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fcfcfb">
+<script>try{if(localStorage.getItem('sajad:theme')==='dark')
+document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
 <title>Projects · Sajad</title>
 <meta name="description" content="Projects: Lexora, EsenceLab, HookFlow, neuDB. Backend systems and applied AI.">
 <meta name="author" content="Abdulla Sajad">
 <link rel="canonical" href="https://sajadxdp.github.io/projects.html">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sajad">
 <meta property="og:title" content="Projects · Sajad">
-<meta property="og:description" content="Things I've built recently, with write-ups and source code.">
+<meta property="og:description" content="Projects: Lexora, EsenceLab, HookFlow, neuDB. Backend systems and applied AI.">
 <meta property="og:image" content="https://sajadxdp.github.io/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Sajad. I write the backends behind AI products.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="./favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header>
-  <div class="brand-row">
-    <a class="wordmark" href="./" aria-label="Sajad, home"><span class="visually-hidden">Sajad</span><svg class="mark" viewBox="0 0 18 7" width="72" height="28" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="9" y="0" width="1" height="1"/><rect x="17" y="0" width="1" height="1"/><rect x="17" y="1" width="1" height="1"/><rect x="0" y="2" width="3" height="1"/><rect x="4" y="2" width="3" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="11" y="2" width="3" height="1"/><rect x="17" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="15" y="3" width="3" height="1"/><rect x="0" y="4" width="3" height="1"/><rect x="4" y="4" width="3" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="11" y="4" width="3" height="1"/><rect x="15" y="4" width="1" height="1"/><rect x="17" y="4" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/><rect x="11" y="5" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="15" y="5" width="1" height="1"/><rect x="17" y="5" width="1" height="1"/><rect x="0" y="6" width="3" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="13" y="6" width="1" height="1"/><rect x="15" y="6" width="3" height="1"/></svg></a>
-    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch to the light theme">light</button>
-  </div>
-  <p class="site-role">software engineer</p>
+  <a class="wordmark" href="./" aria-label="Sajad, home">sajad</a>
   <nav aria-label="Primary">
     <a href="./about.html"><span class="n">01</span> About me</a>
     <a href="./projects.html"><span class="n">02</span> Projects</a>
     <a href="./contact.html"><span class="n">03</span> Contact</a>
   </nav>
+  <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch to the dark theme">dark</button>
 </header>
 
-<main id="main" class="cards">
+<main id="main">
 <h1>Projects</h1>
 
 <p>Backend systems and applied AI. Two of the four have write-ups; the rest live on GitHub.</p>
 
-  <article>
-  <h3><a href="./projects/lexora.html">01 · Lexora</a></h3>
+  <article class="proj">
+  <h2><a href="./projects/lexora.html">01 · Lexora</a></h2>
 <p>Ask questions over your documents. The LLM call is the easy part. Auth, jobs, isolation, and retries are the system.</p>
-<ul class="chips">
-  <li class="chip">Python</li>
-  <li class="chip">FastAPI</li>
-  <li class="chip">PostgreSQL</li>
-  <li class="chip">Redis</li>
-  <li class="chip">35 tests</li>
-</ul>
-<p><a href="./projects/lexora.html">Case study</a> · <a href="https://github.com/sajadxdp/lexora-ai">Source</a></p>
+<p class="meta">python · fastapi · postgresql · redis · 35 tests</p>
+  <p class="links-line"><a href="./projects/lexora.html">Case study</a> · <a href="https://github.com/sajadxdp/lexora-ai">Source</a></p>
 </article>
-  <article>
-  <h3><a href="./projects/esencelab.html">02 · EsenceLab</a></h3>
-<p>AI hiring platform: product UX, backend services, resume and job matching.</p>
-<ul class="chips">
-  <li class="chip">TypeScript</li>
-  <li class="chip">Express</li>
-  <li class="chip">PostgreSQL</li>
-</ul>
-<p><a href="./projects/esencelab.html">Write-up</a> · <a href="https://github.com/sajadxdp/esencelab">Source</a></p>
+  <article class="proj">
+  <h2><a href="./projects/esencelab.html">02 · EsenceLab</a></h2>
+<p>AI hiring platform: product UX in front, backend services behind, resume and job matching in between.</p>
+<p class="meta">typescript · express · next.js · fastapi · supabase · docker</p>
+  <p class="links-line"><a href="./projects/esencelab.html">Write-up</a> · <a href="https://github.com/sajadxdp/esencelab">Source</a></p>
 </article>
-  <article>
-  <h3><a href="https://github.com/sajadxdp/hookflow">03 · HookFlow</a></h3>
-<p>Webhooks that never get lost. The system accepts first, persists, then delivers with atomic claims, leases, and dead-letter recovery. Concurrent workers, zero double delivery, verified by test.</p>
-<ul class="chips">
-  <li class="chip">Python</li>
-  <li class="chip">FastAPI</li>
-  <li class="chip">PostgreSQL</li>
-  <li class="chip">Redis</li>
-  <li class="chip">79 tests</li>
-  <li class="chip">~93% coverage</li>
-  <li class="chip">5 CI jobs</li>
-</ul>
-<p><a href="https://github.com/sajadxdp/hookflow">Source</a></p>
+  <article class="proj">
+  <h2><a href="https://github.com/sajadxdp/hookflow">03 · HookFlow</a></h2>
+<p>Webhooks that never get lost. The system accepts first, persists, then delivers with atomic claims, leases, and dead-letter recovery.</p>
+<p class="meta">python · fastapi · postgresql · redis · 79 tests · 93% coverage</p>
+  <p class="links-line"><a href="https://github.com/sajadxdp/hookflow">Source</a></p>
 </article>
-  <article>
-  <h3><a href="https://github.com/sajadxdp/neudb">04 · neuDB</a></h3>
+  <article class="proj">
+  <h2><a href="https://github.com/sajadxdp/neudb">04 · neuDB</a></h2>
 <p>A tiny database in plain Python. Writes are crash-atomic, files are human-readable, and the scope is stated plainly rather than sold.</p>
-<ul class="chips">
-  <li class="chip">Python</li>
-  <li class="chip">32 tests</li>
-  <li class="chip">CI</li>
-</ul>
-<p><a href="https://github.com/sajadxdp/neudb">Source</a> · <a href="https://github.com/sajadxdp/neudb/blob/main/CHANGELOG.md">Changelog</a></p>
+<p class="meta">python · 32 tests · ci</p>
+  <p class="links-line"><a href="https://github.com/sajadxdp/neudb">Source</a> · <a href="https://github.com/sajadxdp/neudb/blob/main/CHANGELOG.md">Changelog</a></p>
 </article>
-  </main>
+</main>
 
-  <footer>
-  <p>© <span id="year">2026</span> sajad</p>
+<footer>
+  <p>&copy; <span id="year">2026</span> sajad</p>
 </footer>
 
 <script src="./script.js" defer></script>

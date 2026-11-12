@@ -2,25 +2,25 @@
 (function () {
   'use strict';
 
-  /* Color theme. Dark is the default; light persists in localStorage. The
-     label names the room you would move to, not the one you are in. */
+  /* Color theme. Light paper is the default; dark persists in localStorage.
+     The label names the room you would move to, not the one you are in. */
   var root = document.documentElement;
   var toggle = document.getElementById('theme-toggle');
   var themeMeta = document.querySelector('meta[name="theme-color"]');
-  var isLight = root.getAttribute('data-theme') === 'light';
+  var isDark = root.getAttribute('data-theme') === 'dark';
   if (toggle) {
     var setTheme = function (next) {
-      isLight = next === 'light';
-      root.setAttribute('data-theme', isLight ? 'light' : 'dark');
-      if (themeMeta) themeMeta.content = isLight ? '#e9e8e4' : '#141516';
-      toggle.textContent = isLight ? 'dark' : 'light';
+      isDark = next === 'dark';
+      root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      if (themeMeta) themeMeta.content = isDark ? '#1e2023' : '#fcfcfb';
+      toggle.textContent = isDark ? 'light' : 'dark';
       toggle.setAttribute('aria-label',
-        isLight ? 'Switch to the dark theme' : 'Switch to the light theme');
+        isDark ? 'Switch to the light theme' : 'Switch to the dark theme');
       try { localStorage.setItem('sajad:theme', next); } catch (e) { /* private mode */ }
     };
-    if (isLight) setTheme('light');
+    if (isDark) setTheme('dark');
     toggle.addEventListener('click', function () {
-      setTheme(isLight ? 'dark' : 'light');
+      setTheme(isDark ? 'light' : 'dark');
     });
   }
 
@@ -28,8 +28,7 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  /* Mark where the reader is. Exact match wins; otherwise highlight the section.
-     Paths are normalised to a trailing slash so /projects.html and /projects/ compare equal. */
+  /* Mark where the reader is. Exact match wins; otherwise highlight the section. */
   function path(href) {
     var p = new URL(href, location.href).pathname
       .replace(/index\.html?$/, '')

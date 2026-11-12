@@ -1,60 +1,48 @@
+<!-- no build step, no frameworks. view source is fine. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#141516">
-<script>try{if(localStorage.getItem('sajad:theme')==='light')
-document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
-<title>EsenceLab: multi-service product backend · Sajad</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fcfcfb">
+<script>try{if(localStorage.getItem('sajad:theme')==='dark')
+document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<title>EsenceLab · Sajad</title>
 <meta name="description" content="Case study: Express API with JWT and RBAC, FastAPI AI service, Next.js frontend, Supabase PostgreSQL, and splitting a 6K-line monolith.">
 <meta name="author" content="Abdulla Sajad">
 <link rel="canonical" href="https://sajadxdp.github.io/projects/esencelab.html">
-<meta property="og:type" content="article">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="Sajad">
-<meta property="og:title" content="EsenceLab: multi-service product backend">
+<meta property="og:title" content="EsenceLab · Sajad">
 <meta property="og:description" content="Case study: Express API with JWT and RBAC, FastAPI AI service, Next.js frontend, Supabase PostgreSQL, and splitting a 6K-line monolith.">
 <meta property="og:image" content="https://sajadxdp.github.io/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Sajad. I write the backends behind AI products.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header>
-  <div class="brand-row">
-    <a class="wordmark" href="../" aria-label="Sajad, home"><span class="visually-hidden">Sajad</span><svg class="mark" viewBox="0 0 18 7" width="72" height="28" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="9" y="0" width="1" height="1"/><rect x="17" y="0" width="1" height="1"/><rect x="17" y="1" width="1" height="1"/><rect x="0" y="2" width="3" height="1"/><rect x="4" y="2" width="3" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="11" y="2" width="3" height="1"/><rect x="17" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="15" y="3" width="3" height="1"/><rect x="0" y="4" width="3" height="1"/><rect x="4" y="4" width="3" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="11" y="4" width="3" height="1"/><rect x="15" y="4" width="1" height="1"/><rect x="17" y="4" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/><rect x="11" y="5" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="15" y="5" width="1" height="1"/><rect x="17" y="5" width="1" height="1"/><rect x="0" y="6" width="3" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="13" y="6" width="1" height="1"/><rect x="15" y="6" width="3" height="1"/></svg></a>
-    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch to the light theme">light</button>
-  </div>
-  <p class="site-role">software engineer</p>
+  <a class="wordmark" href="../" aria-label="Sajad, home">sajad</a>
   <nav aria-label="Primary">
     <a href="../about.html"><span class="n">01</span> About me</a>
     <a href="../projects.html"><span class="n">02</span> Projects</a>
     <a href="../contact.html"><span class="n">03</span> Contact</a>
   </nav>
+  <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch to the dark theme">dark</button>
 </header>
 
-<main id="main" class="case">
+<main id="main">
 <article>
   <p class="breadcrumb"><a href="../projects.html">projects</a> / esencelab</p>
   <h1>EsenceLab</h1>
   <p><em>Multi-service product system: TypeScript API with authentication and RBAC, Python AI service, PostgreSQL.</em></p>
-  <ul class="chips">
-    <li class="chip">TypeScript</li>
-    <li class="chip">Express</li>
-    <li class="chip">Next.js</li>
-    <li class="chip">Python FastAPI</li>
-    <li class="chip">Supabase PostgreSQL</li>
-    <li class="chip">Docker</li>
-    <li class="chip">RBAC suite</li>
-    <li class="chip">CI</li>
-    <li class="chip"><a href="https://github.com/sajadxdp/esencelab">source</a></li>
-  </ul>
+  <p class="meta">typescript · express · next.js · fastapi · supabase · docker · rbac suite · ci</p>
 
   <h2>Problem</h2>
   <p>Students can't map resumes to skill gaps, recruiters screen manually, admins lack one control surface. The engineering problem underneath: three deployables (web, API, AI service) share one data model, and the boundaries hold auth, role-gated onboarding, resume parsing, and job matching.</p>
@@ -75,7 +63,7 @@ PostgreSQL (Supabase: users, resumes,
   candidates, jobs, applications)
   ↓
 AI service (FastAPI: /ai/parse-resume, /ai/match)</pre>
-  <p>Service calls are synchronous <code>fetch</code> with an internal service token and 8–12s timeouts, no queues yet, documented as the next step. Matching is deterministic first (<code>overlap×0.55 + TF-IDF×0.45</code> with fallbacks); the LLM path is optional with local fallback.</p>
+  <p>Service calls are synchronous <code>fetch</code> with an internal service token and 8-12s timeouts, no queues yet, documented as the next step. Matching is deterministic first (<code>overlap×0.55 + TF-IDF×0.45</code> with fallbacks); the LLM path is optional with local fallback.</p>
 
   <h2>Implementation</h2>
   <p>Auth with JWT plus role-based access across student/recruiter/admin, including a gated recruiter flow (request → admin approve → temp password → login). Resume upload (PDF, 4MB cap) with structured parsing. Jobs CRUD plus applications, skill-overlap matching with explanations. Per-endpoint in-memory metrics and <code>/api/health</code>; Docker per service; CI with RBAC smoke and stress suites running against a mocked Supabase.</p>
@@ -104,14 +92,15 @@ AI service (FastAPI: /ai/parse-resume, /ai/match)</pre>
   <p>Product engineering is boundary work: API contracts, auth semantics, data ownership, and knowing which features to leave out of the narrative. A monolith you can split step by step beats a microservice diagram you can't deploy.</p>
 
   <h2>Source</h2>
-  <p><a href="https://github.com/sajadxdp/esencelab">github.com/sajadxdp/esencelab</a></p>
+  <p class="links-line"><a href="https://github.com/sajadxdp/esencelab">github.com/sajadxdp/esencelab</a></p>
 
   <p class="back-link"><a href="../projects.html">← projects</a></p>
 </article>
-  </main>
+  
+</main>
 
-  <footer>
-  <p>© <span id="year">2026</span> sajad · <a href="https://github.com/sajadxdp">github</a> · <a href="https://www.linkedin.com/in/abdullasajad">linkedin</a></p>
+<footer>
+  <p>&copy; <span id="year">2026</span> sajad</p>
 </footer>
 
 <script src="../script.js" defer></script>
