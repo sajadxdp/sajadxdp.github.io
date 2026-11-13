@@ -1,8 +1,8 @@
-/* sajadxdp.github.io - edition 7.1, "charcoal studio", dark minimal.
-   Dark only: no toggle, no light room, no theme storage. Mono
-   chassis, rail + content home grid, hairline rows. Tokens only,
-   system fonts only, no frameworks, no build step, zero
-   animations. */
+/* sajadxdp.github.io - edition 8, "charcoal document", dark minimal.
+   Bear-structured (pattern only): one centered document column, flat
+   title rows, dashed rules. Dark only: no toggle, no light room, no
+   theme storage. Tokens only, system fonts only, no frameworks, no
+   build step, zero animations. */
 
 :root {
   --bg: #141516;
@@ -74,7 +74,7 @@ a:hover { color: var(--accent); }
 /* ---- header ---- */
 
 header {
-  max-width: 60rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding-top: max(1.4rem, env(safe-area-inset-top));
   display: flex;
@@ -109,7 +109,7 @@ nav[aria-label="Primary"] a[aria-current="page"] { color: var(--bright); }
 /* ---- page chassis ---- */
 
 main {
-  max-width: 60rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 3.2rem 0 max(4rem, env(safe-area-inset-bottom));
 }
@@ -137,92 +137,18 @@ strong { color: var(--bright); font-weight: 600; }
 
 .stand { font-size: 1.02rem; max-width: var(--read); }
 
-.meta {
-  font: 400 .75rem/1.7 var(--mono);
-  color: var(--muted);
-  margin: 0 0 1rem;
-}
-
-/* ---- home: rail grid ---- */
-
-.home-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 2.6rem;
-  margin-top: 2.4rem;
-}
-
-@media (min-width: 840px) {
-  .home-grid {
-    grid-template-columns: 13rem minmax(0, 1fr);
-    gap: 3.4rem;
-  }
-}
-
-.rail h2 {
-  font: 400 .7rem/1.6 var(--mono);
-  color: var(--muted);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  margin: 0 0 .55rem;
-}
-
-.rail-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font: 400 .82rem/2 var(--mono);
-}
-
-.rail-list li { margin: 0; }
-
-.rail-list a { color: var(--text); }
-
-.rail-list a:hover { color: var(--accent); }
-
-/* ---- section head + rows ---- */
-
-.sec-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: .2rem 1rem;
-  margin: 0 0 .4rem;
-}
-
-.sec-head h2 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.more {
-  font: 400 .75rem/1.7 var(--mono);
-  color: var(--muted);
-}
-
-.more:hover { color: var(--accent); }
-
-.arrow { font-size: .85em; }
+/* ---- flat title rows (the one list component, every page) ---- */
 
 ul.rows {
   list-style: none;
   margin: 0 0 2rem;
   padding: 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px dashed var(--border-strong);
 }
 
 .row {
-  border-top: 1px solid var(--border);
+  border-top: 1px dashed var(--border-strong);
   padding: .95rem 0 1rem;
-}
-
-.row-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: .1rem 1rem;
 }
 
 .row-title {
@@ -232,47 +158,23 @@ ul.rows {
 
 .row-title:hover { color: var(--accent); }
 
-.row-meta {
-  font: 400 .7rem/1.7 var(--mono);
-  color: var(--muted);
-}
-
-.row-meta a { color: var(--muted); }
-
-.row-meta a:hover { color: var(--accent); }
-
 .row p {
   margin: .25rem 0 0;
   font-size: .93rem;
   max-width: var(--read);
 }
 
-/* ---- projects page ---- */
+/* closing hand-off line (home) */
 
-article.proj {
-  border-top: 1px solid var(--border);
-  padding: 1.2rem 0 1.25rem;
-}
+.hand { max-width: var(--read); }
 
-article.proj:last-of-type { border-bottom: 1px solid var(--border); }
+/* ---- project meta line ---- */
 
-article.proj h2 {
-  margin: 0 0 .4rem;
-  font-size: 1.02rem;
-}
-
-article.proj > p { max-width: var(--read); }
-
-article.proj .links-line,
 .links-line {
   font: 400 .78rem/1.7 var(--mono);
-  margin: 0;
   color: var(--muted);
+  margin: .35rem 0 0;
 }
-
-.links-line a { color: var(--text); }
-
-.links-line a:hover { color: var(--accent); }
 
 /* ---- copy email ---- */
 
@@ -296,12 +198,13 @@ article.proj .links-line,
 /* ---- footer ---- */
 
 footer {
-  max-width: 60rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 1rem 0 2.2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px dashed var(--border-strong);
   font: 400 .72rem/1.7 var(--mono);
   color: var(--muted);
+  text-align: center;
 }
 
 footer p { margin: 0; }
