@@ -38,9 +38,11 @@
     status.setAttribute('aria-live', 'polite');
     status.className = 'visually-hidden';
 
+    var created = 0;
     document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
       var addr = a.getAttribute('href').replace(/^mailto:/, '').split('?')[0].trim();
       if (!addr || a.textContent.indexOf('@') === -1) return;
+      created++;
 
       var btn = document.createElement('button');
       btn.type = 'button';
@@ -82,6 +84,7 @@
       });
     });
 
-    document.body.appendChild(status);
+    /* the live region matters only where a copy button exists */
+    if (created) document.body.appendChild(status);
   }
 })();

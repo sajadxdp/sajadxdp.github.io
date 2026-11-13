@@ -45,6 +45,13 @@ a:hover { color: var(--accent); }
    (vertical padding does not expand the line box) */
 main a { padding: .25em 0; }
 
+/* body-text links are underlined: color alone is not a link cue
+   (WCAG 1.4.1). Row titles keep their bold weight as the cue. */
+main p a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -106,6 +113,11 @@ header nav[aria-label="Primary"] {
 }
 
 nav[aria-label="Primary"] a { color: var(--muted); padding: .3em 0; }
+
+nav[aria-label="Primary"] a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 nav[aria-label="Primary"] a:hover,
 nav[aria-label="Primary"] a[aria-current="page"] { color: var(--bright); }
