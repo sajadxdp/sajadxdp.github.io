@@ -14,7 +14,7 @@ email contact. No blog, no feed, no archive, no subpages.
 - Four pages: `index.html`, `about.html`, `projects.html`, `contact.html`.
   No 404 page, no project subdirectories. Every project title links its
   GitHub repo directly.
-- `style.css` (edition 7, dark-only charcoal: bg `#141516`, text `#c9cdd2`,
+- `style.css` (edition 7.1, dark-only charcoal: bg `#141516`, text `#c9cdd2`,
   bright `#e9ecef`, muted `#8e9399`, accent `#e0855a`; 40rem read column,
   fluid gutter and h1, rail + content home grid at 840px, hairline rows,
   zero animations)

@@ -1,4 +1,4 @@
-/* sajadxdp.github.io - edition 7, "charcoal studio", dark minimal.
+/* sajadxdp.github.io - edition 7.1, "charcoal studio", dark minimal.
    Dark only: no toggle, no light room, no theme storage. Mono
    chassis, rail + content home grid, hairline rows. Tokens only,
    system fonts only, no frameworks, no build step, zero
@@ -105,13 +105,6 @@ nav[aria-label="Primary"] a { color: var(--muted); }
 
 nav[aria-label="Primary"] a:hover,
 nav[aria-label="Primary"] a[aria-current="page"] { color: var(--bright); }
-
-.site-role {
-  flex-basis: 100%;
-  font: 400 .7rem/1.6 var(--mono);
-  color: var(--muted);
-  letter-spacing: .04em;
-}
 
 /* ---- page chassis ---- */
 
@@ -326,6 +319,4 @@ footer p { margin: 0; }
     font-size: .72rem;
     gap: .15rem .8rem;
   }
-  nav[aria-label="Primary"] a { padding: .3em 0; }
-  .site-role { order: 3; }
-}
+  nav[aria-label="Primary"] a { padding: .3em 0; }}

@@ -4,7 +4,7 @@ Static portfolio site, hosted via GitHub Pages at <https://sajadxdp.github.io/>.
 
 ## Maintenance
 
-- Edition 7, "charcoal studio, dark minimal" (2026-11-13): dark-only
+- Edition 7.1, "charcoal studio, dark minimal" (2026-11-13): dark-only
   charcoal palette, zero animations, no theme switching.
 - Pages: `index.html`, `about.html`, `projects.html`, `contact.html`.
   Nothing else serves. Every project title links its GitHub repo.
