@@ -1,8 +1,9 @@
-/* sajadxdp.github.io - edition 8, "charcoal document", dark minimal.
-   Bear-structured (pattern only): one centered document column, flat
-   title rows, dashed rules. Dark only: no toggle, no light room, no
-   theme storage. Tokens only, system fonts only, no frameworks, no
-   build step, zero animations. */
+/* sajadxdp.github.io - edition 9, "about-first", dark minimal.
+   Bear-structured (pattern only): one centered document column,
+   flat title rows, dashed rules. The landing IS the About page;
+   Projects and Contact are the options. Dark only: no toggle, no
+   light room, no theme storage. Tokens only, system fonts only,
+   no frameworks, no build step, zero animations. */
 
 :root {
   --bg: #141516;
@@ -151,8 +152,6 @@ li { margin-bottom: .3rem; }
 
 strong { color: var(--bright); font-weight: 600; }
 
-.stand { font-size: 1.02rem; max-width: var(--read); }
-
 /* ---- flat title rows (the one list component, every page) ---- */
 
 ul.rows {
@@ -179,10 +178,6 @@ ul.rows {
   font-size: .93rem;
   max-width: var(--read);
 }
-
-/* closing hand-off line (home) */
-
-.hand { max-width: var(--read); }
 
 /* ---- project meta line ---- */
 
